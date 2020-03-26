@@ -9,11 +9,13 @@ import { GoogleChartsModule } from 'angular-google-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { GeomapComponent } from './geomap/geomap.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GeomapComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
