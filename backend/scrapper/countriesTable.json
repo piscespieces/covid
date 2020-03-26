@@ -7,30 +7,30 @@
         "case_per_mill": "56"
     },
     {
-        "country_name": "Italy",
-        "total_cases": "80539",
-        "total_deaths": "8165",
-        "total_recov": "10361",
-        "case_per_mill": "1332"
+        "country_name": "USA",
+        "total_cases": "81943",
+        "total_deaths": "1177",
+        "total_recov": "1864",
+        "case_per_mill": "248"
     },
     {
-        "country_name": "United States",
-        "total_cases": "75665",
-        "total_deaths": "1100",
-        "total_recov": "1863",
-        "case_per_mill": "229"
+        "country_name": "Italy",
+        "total_cases": "80589",
+        "total_deaths": "8215",
+        "total_recov": "10361",
+        "case_per_mill": "1333"
     },
     {
         "country_name": "Spain",
-        "total_cases": "56197",
-        "total_deaths": "4145",
+        "total_cases": "56347",
+        "total_deaths": "4154",
         "total_recov": "7015",
-        "case_per_mill": "1202"
+        "case_per_mill": "1205"
     },
     {
         "country_name": "Germany",
         "total_cases": "43646",
-        "total_deaths": "239",
+        "total_deaths": "262",
         "total_recov": "5673",
         "case_per_mill": "521"
     },
@@ -43,24 +43,24 @@
     },
     {
         "country_name": "France",
-        "total_cases": "25233",
-        "total_deaths": "1331",
-        "total_recov": "3900",
-        "case_per_mill": "387"
+        "total_cases": "29155",
+        "total_deaths": "1696",
+        "total_recov": "4948",
+        "case_per_mill": "447"
     },
     {
         "country_name": "Switzerland",
-        "total_cases": "11712",
+        "total_cases": "11811",
         "total_deaths": "191",
         "total_recov": "131",
-        "case_per_mill": "1353"
+        "case_per_mill": "1365"
     },
     {
         "country_name": "UK",
-        "total_cases": "9849",
-        "total_deaths": "477",
+        "total_cases": "11658",
+        "total_deaths": "578",
         "total_recov": "135",
-        "case_per_mill": "145"
+        "case_per_mill": "172"
     },
     {
         "country_name": "S. Korea",
@@ -78,10 +78,10 @@
     },
     {
         "country_name": "Austria",
-        "total_cases": "6703",
+        "total_cases": "6847",
         "total_deaths": "49",
         "total_recov": "112",
-        "case_per_mill": "744"
+        "case_per_mill": "760"
     },
     {
         "country_name": "Belgium",
@@ -92,10 +92,17 @@
     },
     {
         "country_name": "Canada",
-        "total_cases": "3579",
-        "total_deaths": "36",
-        "total_recov": "185",
-        "case_per_mill": "95"
+        "total_cases": "3910",
+        "total_deaths": "39",
+        "total_recov": "199",
+        "case_per_mill": "104"
+    },
+    {
+        "country_name": "Turkey",
+        "total_cases": "3629",
+        "total_deaths": "75",
+        "total_recov": "26",
+        "case_per_mill": "43"
     },
     {
         "country_name": "Portugal",
@@ -106,10 +113,17 @@
     },
     {
         "country_name": "Norway",
-        "total_cases": "3316",
+        "total_cases": "3346",
         "total_deaths": "14",
         "total_recov": "6",
-        "case_per_mill": "612"
+        "case_per_mill": "617"
+    },
+    {
+        "country_name": "Brazil",
+        "total_cases": "2915",
+        "total_deaths": "77",
+        "total_recov": "6",
+        "case_per_mill": "14"
     },
     {
         "country_name": "Sweden",
@@ -127,24 +141,10 @@
     },
     {
         "country_name": "Israel",
-        "total_cases": "2666",
+        "total_cases": "2693",
         "total_deaths": "8",
         "total_recov": "68",
-        "case_per_mill": "308"
-    },
-    {
-        "country_name": "Brazil",
-        "total_cases": "2611",
-        "total_deaths": "63",
-        "total_recov": "6",
-        "case_per_mill": "12"
-    },
-    {
-        "country_name": "Turkey",
-        "total_cases": "2433",
-        "total_deaths": "59",
-        "total_recov": "26",
-        "case_per_mill": "29"
+        "case_per_mill": "311"
     },
     {
         "country_name": "Malaysia",
@@ -203,18 +203,18 @@
         "case_per_mill": "68"
     },
     {
+        "country_name": "Poland",
+        "total_cases": "1221",
+        "total_deaths": "16",
+        "total_recov": "7",
+        "case_per_mill": "32"
+    },
+    {
         "country_name": "Pakistan",
         "total_cases": "1179",
         "total_deaths": "9",
         "total_recov": "21",
         "case_per_mill": "5"
-    },
-    {
-        "country_name": "Poland",
-        "total_cases": "1163",
-        "total_deaths": "14",
-        "total_recov": "7",
-        "case_per_mill": "31"
     },
     {
         "country_name": "Thailand",
@@ -226,7 +226,7 @@
     {
         "country_name": "Romania",
         "total_cases": "1029",
-        "total_deaths": "18",
+        "total_deaths": "22",
         "total_recov": "94",
         "case_per_mill": "53"
     },
@@ -281,7 +281,7 @@
     },
     {
         "country_name": "India",
-        "total_cases": "719",
+        "total_cases": "722",
         "total_deaths": "16",
         "total_recov": "45",
         "case_per_mill": "0.5"
@@ -329,6 +329,13 @@
         "case_per_mill": "129"
     },
     {
+        "country_name": "Qatar",
+        "total_cases": "549",
+        "total_deaths": "",
+        "total_recov": "43",
+        "case_per_mill": "191"
+    },
+    {
         "country_name": "Estonia",
         "total_cases": "538",
         "total_deaths": "1",
@@ -336,25 +343,32 @@
         "case_per_mill": "406"
     },
     {
-        "country_name": "Qatar",
-        "total_cases": "537",
-        "total_deaths": "",
-        "total_recov": "41",
-        "case_per_mill": "186"
-    },
-    {
         "country_name": "Argentina",
         "total_cases": "502",
         "total_deaths": "8",
-        "total_recov": "52",
+        "total_recov": "63",
         "case_per_mill": "11"
+    },
+    {
+        "country_name": "Egypt",
+        "total_cases": "495",
+        "total_deaths": "24",
+        "total_recov": "102",
+        "case_per_mill": "5"
     },
     {
         "country_name": "Croatia",
         "total_cases": "495",
-        "total_deaths": "2",
+        "total_deaths": "3",
         "total_recov": "22",
         "case_per_mill": "121"
+    },
+    {
+        "country_name": "Colombia",
+        "total_cases": "491",
+        "total_deaths": "6",
+        "total_recov": "8",
+        "case_per_mill": "10"
     },
     {
         "country_name": "Dominican Republic",
@@ -371,13 +385,6 @@
         "case_per_mill": "4"
     },
     {
-        "country_name": "Colombia",
-        "total_cases": "470",
-        "total_deaths": "4",
-        "total_recov": "8",
-        "case_per_mill": "9"
-    },
-    {
         "country_name": "Bahrain",
         "total_cases": "458",
         "total_deaths": "4",
@@ -390,13 +397,6 @@
         "total_deaths": "7",
         "total_recov": "15",
         "case_per_mill": "52"
-    },
-    {
-        "country_name": "Egypt",
-        "total_cases": "456",
-        "total_deaths": "21",
-        "total_recov": "95",
-        "case_per_mill": "4"
     },
     {
         "country_name": "Hong Kong",
@@ -435,10 +435,10 @@
     },
     {
         "country_name": "Lithuania",
-        "total_cases": "290",
+        "total_cases": "299",
         "total_deaths": "4",
         "total_recov": "1",
-        "case_per_mill": "107"
+        "case_per_mill": "110"
     },
     {
         "country_name": "Armenia",
@@ -490,6 +490,13 @@
         "case_per_mill": "129"
     },
     {
+        "country_name": "Costa Rica",
+        "total_cases": "231",
+        "total_deaths": "2",
+        "total_recov": "2",
+        "case_per_mill": "45"
+    },
+    {
         "country_name": "Slovakia",
         "total_cases": "226",
         "total_deaths": "",
@@ -509,6 +516,13 @@
         "total_deaths": "",
         "total_recov": "",
         "case_per_mill": "62"
+    },
+    {
+        "country_name": "Jordan",
+        "total_cases": "212",
+        "total_deaths": "",
+        "total_recov": "1",
+        "case_per_mill": "21"
     },
     {
         "country_name": "San Marino",
@@ -532,18 +546,18 @@
         "case_per_mill": "96"
     },
     {
-        "country_name": "Costa Rica",
-        "total_cases": "201",
-        "total_deaths": "2",
-        "total_recov": "2",
-        "case_per_mill": "39"
-    },
-    {
         "country_name": "Tunisia",
         "total_cases": "200",
         "total_deaths": "6",
         "total_recov": "2",
         "case_per_mill": "17"
+    },
+    {
+        "country_name": "Ukraine",
+        "total_cases": "196",
+        "total_deaths": "5",
+        "total_recov": "1",
+        "case_per_mill": "4"
     },
     {
         "country_name": "Bosnia and Herzegovina",
@@ -565,20 +579,6 @@
         "total_deaths": "6",
         "total_recov": "17",
         "case_per_mill": "60"
-    },
-    {
-        "country_name": "Jordan",
-        "total_cases": "172",
-        "total_deaths": "",
-        "total_recov": "1",
-        "case_per_mill": "17"
-    },
-    {
-        "country_name": "Ukraine",
-        "total_cases": "162",
-        "total_deaths": "5",
-        "total_recov": "1",
-        "case_per_mill": "4"
     },
     {
         "country_name": "Vietnam",
@@ -686,9 +686,16 @@
         "case_per_mill": "6"
     },
     {
+        "country_name": "Ivory Coast",
+        "total_cases": "96",
+        "total_deaths": "",
+        "total_recov": "3",
+        "case_per_mill": "4"
+    },
+    {
         "country_name": "Afghanistan",
         "total_cases": "94",
-        "total_deaths": "2",
+        "total_deaths": "4",
         "total_recov": "2",
         "case_per_mill": "2"
     },
@@ -714,17 +721,10 @@
         "case_per_mill": "64"
     },
     {
-        "country_name": "Ivory Coast",
-        "total_cases": "80",
-        "total_deaths": "",
-        "total_recov": "3",
-        "case_per_mill": "3"
-    },
-    {
         "country_name": "Georgia",
         "total_cases": "79",
         "total_deaths": "",
-        "total_recov": "10",
+        "total_recov": "11",
         "case_per_mill": "20"
     },
     {
@@ -735,11 +735,25 @@
         "case_per_mill": "3"
     },
     {
+        "country_name": "Uzbekistan",
+        "total_cases": "75",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "2"
+    },
+    {
         "country_name": "Guadeloupe",
         "total_cases": "73",
         "total_deaths": "1",
         "total_recov": "",
         "case_per_mill": "182"
+    },
+    {
+        "country_name": "Montenegro",
+        "total_cases": "69",
+        "total_deaths": "1",
+        "total_recov": "",
+        "case_per_mill": "110"
     },
     {
         "country_name": "Cuba",
@@ -749,13 +763,6 @@
         "case_per_mill": "6"
     },
     {
-        "country_name": "Montenegro",
-        "total_cases": "67",
-        "total_deaths": "1",
-        "total_recov": "",
-        "case_per_mill": "107"
-    },
-    {
         "country_name": "Martinique",
         "total_cases": "66",
         "total_deaths": "1",
@@ -763,11 +770,11 @@
         "case_per_mill": "176"
     },
     {
-        "country_name": "Uzbekistan",
+        "country_name": "Nigeria",
         "total_cases": "65",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "2"
+        "total_deaths": "1",
+        "total_recov": "2",
+        "case_per_mill": "0.3"
     },
     {
         "country_name": "Trinidad and Tobago",
@@ -777,9 +784,16 @@
         "case_per_mill": "44"
     },
     {
+        "country_name": "Liechtenstein",
+        "total_cases": "56",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "1469"
+    },
+    {
         "country_name": "Honduras",
         "total_cases": "52",
-        "total_deaths": "",
+        "total_deaths": "1",
         "total_recov": "",
         "case_per_mill": "5"
     },
@@ -789,20 +803,6 @@
         "total_deaths": "3",
         "total_recov": "",
         "case_per_mill": "0.6"
-    },
-    {
-        "country_name": "Nigeria",
-        "total_cases": "51",
-        "total_deaths": "1",
-        "total_recov": "2",
-        "case_per_mill": "0.2"
-    },
-    {
-        "country_name": "Liechtenstein",
-        "total_cases": "51",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "1338"
     },
     {
         "country_name": "Channel Islands",
@@ -826,6 +826,13 @@
         "case_per_mill": "7"
     },
     {
+        "country_name": "Bolivia",
+        "total_cases": "43",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "4"
+    },
+    {
         "country_name": "Paraguay",
         "total_cases": "41",
         "total_deaths": "3",
@@ -840,18 +847,18 @@
         "case_per_mill": "3"
     },
     {
-        "country_name": "Bolivia",
-        "total_cases": "40",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "3"
-    },
-    {
         "country_name": "Mayotte",
         "total_cases": "36",
         "total_deaths": "",
         "total_recov": "",
         "case_per_mill": "132"
+    },
+    {
+        "country_name": "Monaco",
+        "total_cases": "33",
+        "total_deaths": "",
+        "total_recov": "1",
+        "case_per_mill": "841"
     },
     {
         "country_name": "Kenya",
@@ -868,11 +875,11 @@
         "case_per_mill": "48"
     },
     {
-        "country_name": "Monaco",
-        "total_cases": "31",
+        "country_name": "French Polynesia",
+        "total_cases": "30",
         "total_deaths": "",
-        "total_recov": "1",
-        "case_per_mill": "790"
+        "total_recov": "",
+        "case_per_mill": "107"
     },
     {
         "country_name": "French Guiana",
@@ -894,13 +901,6 @@
         "total_deaths": "",
         "total_recov": "5",
         "case_per_mill": "772"
-    },
-    {
-        "country_name": "French Polynesia",
-        "total_cases": "25",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "89"
     },
     {
         "country_name": "Isle of Man",
@@ -987,6 +987,13 @@
         "case_per_mill": "0.2"
     },
     {
+        "country_name": "Equatorial Guinea",
+        "total_cases": "12",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "9"
+    },
+    {
         "country_name": "Ethiopia",
         "total_cases": "12",
         "total_deaths": "",
@@ -1022,13 +1029,6 @@
         "case_per_mill": "284"
     },
     {
-        "country_name": "Equatorial Guinea",
-        "total_cases": "9",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "6"
-    },
-    {
         "country_name": "Cayman Islands",
         "total_cases": "8",
         "total_deaths": "1",
@@ -1041,6 +1041,13 @@
         "total_deaths": "",
         "total_recov": "",
         "case_per_mill": "0.7"
+    },
+    {
+        "country_name": "Namibia",
+        "total_cases": "8",
+        "total_deaths": "",
+        "total_recov": "2",
+        "case_per_mill": "3"
     },
     {
         "country_name": "Suriname",
@@ -1071,11 +1078,11 @@
         "case_per_mill": "112"
     },
     {
-        "country_name": "Namibia",
+        "country_name": "Mozambique",
         "total_cases": "7",
         "total_deaths": "",
-        "total_recov": "2",
-        "case_per_mill": "3"
+        "total_recov": "",
+        "case_per_mill": "0.2"
     },
     {
         "country_name": "Seychelles",
@@ -1134,13 +1141,6 @@
         "case_per_mill": "6"
     },
     {
-        "country_name": "Mozambique",
-        "total_cases": "5",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "0.2"
-    },
-    {
         "country_name": "Syria",
         "total_cases": "5",
         "total_deaths": "",
@@ -1153,6 +1153,13 @@
         "total_deaths": "1",
         "total_recov": "",
         "case_per_mill": "7"
+    },
+    {
+        "country_name": "Angola",
+        "total_cases": "4",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "0.1"
     },
     {
         "country_name": "Congo",
@@ -1223,13 +1230,6 @@
         "total_deaths": "",
         "total_recov": "1",
         "case_per_mill": "0.1"
-    },
-    {
-        "country_name": "Angola",
-        "total_cases": "3",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "0.09"
     },
     {
         "country_name": "Antigua and Barbuda",
@@ -1323,6 +1323,13 @@
         "case_per_mill": "1"
     },
     {
+        "country_name": "Montserrat",
+        "total_cases": "2",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "401"
+    },
+    {
         "country_name": "Nicaragua",
         "total_cases": "2",
         "total_deaths": "",
@@ -1344,6 +1351,13 @@
         "case_per_mill": "0.1"
     },
     {
+        "country_name": "Turks and Caicos",
+        "total_cases": "2",
+        "total_deaths": "",
+        "total_recov": "",
+        "case_per_mill": "52"
+    },
+    {
         "country_name": "Grenada",
         "total_cases": "1",
         "total_deaths": "",
@@ -1356,13 +1370,6 @@
         "total_deaths": "",
         "total_recov": "",
         "case_per_mill": "0.1"
-    },
-    {
-        "country_name": "Montserrat",
-        "total_cases": "1",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "200"
     },
     {
         "country_name": "Papua New Guinea",
@@ -1386,17 +1393,10 @@
         "case_per_mill": "0.8"
     },
     {
-        "country_name": "Turks and Caicos",
-        "total_cases": "1",
-        "total_deaths": "",
-        "total_recov": "",
-        "case_per_mill": "26"
-    },
-    {
         "country_name": "Total:",
-        "total_cases": "510645",
-        "total_deaths": "23028",
-        "total_recov": "122245",
-        "case_per_mill": "65.5"
+        "total_cases": "525297",
+        "total_deaths": "23701",
+        "total_recov": "123329",
+        "case_per_mill": "67.4"
     }
 ]

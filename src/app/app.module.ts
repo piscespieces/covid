@@ -19,7 +19,7 @@ import { GeomapComponent } from './geomap/geomap.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleChartsModule.forRoot('AIzaSyAYseQyQEwxNPUs7gZDvtuFMN7fs3NPSos'),
+    GoogleChartsModule.forRoot('AIzaSyAYseQyQEwxNPUs7gZDvtuFMN7fs3NPSos'), // GOOGLE API KEY, GET YOURS!
     BrowserAnimationsModule,
     MatToolbarModule
   ],

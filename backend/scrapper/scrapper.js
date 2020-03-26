@@ -16,7 +16,7 @@ const getCountries = async () => {
             const case_per_mill = cheerio(e).find('td:nth-child(9)').text()
 
             const countryTableRow = {
-                country_name: country_name === "USA" ? country_name = "United States" : "",
+                country_name,
                 total_cases: total_cases.replace(",", ""),
                 total_deaths: total_deaths.replace(",", ""),
                 total_recov: total_recov.replace(",", ""),
