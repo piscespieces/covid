@@ -5,6 +5,8 @@ const fs = require('fs')
 const url = 'https://www.worldometers.info/coronavirus/';
 const countriesTable = []
 
+const everyHour = new Date()
+
 const getCountries = async () => {
     try {
         const html = await rp(url);
@@ -34,7 +36,7 @@ const getCountries = async () => {
 };
 
 getCountries().then(data => {
-    fs.writeFile('countriesTable.json', JSON.stringify(data, null, 4), (err) => {
+    fs.writeFile('./backend/scrapper/countriesTable.json', JSON.stringify(data, null, 4), (err) => {
         if (err) {
             console.log(`Error writing the file: ${err}`)
         } else {
@@ -43,3 +45,4 @@ getCountries().then(data => {
     })
 })
 
+exports.getCountries = getCountries;
