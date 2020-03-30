@@ -18,3 +18,27 @@ h1 {
 .total-data {
     font-size: 2.5rem;
 }
+
+@media screen and (max-width: 768px) {
+    .header-container {
+        margin-top: 1rem !important;
+        flex-direction: column !important;
+    }
+
+    .data-container {
+        margin: 1rem 0;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .data-container {
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+        }
+    }
+}

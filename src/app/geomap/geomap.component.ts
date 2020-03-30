@@ -46,7 +46,6 @@ export class GeomapComponent implements OnInit {
     },
     legend: { textStyle: { italic: true } }
   }
-
-  width = 750;
-  height = 600;
+  // width = 750;
+  // height = 600;
 }

@@ -1,0 +1,19 @@
+google-chart {
+    width: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    google-chart {
+        width: 95%;
+    }
+
+    .google-chart-container {
+        margin-top: 1rem !important;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    google-chart {
+        width: 100%;
+    }
+}
