@@ -4,11 +4,9 @@ const countriesData = require('./scrapper/countriesTable.json')
 
 setInterval(function () {
     const getCountries = require('./scrapper/scrapper');
-}, 60000); // 10 minutess
+}, 60000); // 10 minutes
 
-// setInterval(function () {
-//     const getCountries = require('./scrapper/scrapper');
-// }, 1 * 60 * 60 * 1000); // 1 hour
+// 1 * 60 * 60 * 1000); // 1 hour
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
