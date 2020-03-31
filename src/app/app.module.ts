@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,12 +23,13 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     NavbarComponent,
     TotalCasesComponent,
     TableComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    GoogleChartsModule.forRoot('AIzaSyAYseQyQEwxNPUs7gZDvtuFMN7fs3NPSos'), // GOOGLE API KEY, GET YOURS!
+    GoogleChartsModule.forRoot('AIzaSyAYseQyQEwxNPUs7gZDvtuFMN7fs3NPSos'), // GOOGLE API KEY, GET YOURS! 
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,

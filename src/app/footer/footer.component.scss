@@ -1,0 +1,14 @@
+mat-toolbar {
+    display: flex;
+
+    .example-fill-remaining-space {
+        /* This fills the remaining space, by using flexbox. 
+           Every toolbar row uses a flexbox row layout. */
+        flex: 1 1 auto;
+    }
+
+    #made {
+        font-size: 1rem;
+        font-weight: 100;
+    }
+}
