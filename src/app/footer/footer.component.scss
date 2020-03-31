@@ -1,14 +1,17 @@
 mat-toolbar {
     display: flex;
 
-    .example-fill-remaining-space {
-        /* This fills the remaining space, by using flexbox. 
-           Every toolbar row uses a flexbox row layout. */
-        flex: 1 1 auto;
+    div {
+        width: 100%;
+
+        span {
+            font-size: 2rem;
+            margin: 0 16px 0 0;
+            color: #fff;
+        }
     }
 
-    #made {
-        font-size: 1rem;
-        font-weight: 100;
+    a {
+        color: 	#DCDCDC
     }
 }

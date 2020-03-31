@@ -2,7 +2,7 @@
     <table mat-table [dataSource]="dataSource">
 
         <ng-container matColumnDef="position">
-            <th mat-header-cell *matHeaderCellDef> Position </th>
+            <th mat-header-cell *matHeaderCellDef> Pos </th>
             <td mat-cell *matCellDef="let element"> {{element.position}} </td>
         </ng-container>
 
@@ -14,18 +14,18 @@
 
         <!-- Name Column -->
         <ng-container matColumnDef="cases">
-            <th mat-header-cell *matHeaderCellDef> Total Cases </th>
+            <th mat-header-cell *matHeaderCellDef> Tot Cases </th>
             <td mat-cell *matCellDef="let element"> {{element.cases}} </td>
         </ng-container>
 
         <!-- Weight Column -->
         <ng-container matColumnDef="deaths">
-            <th mat-header-cell *matHeaderCellDef> Total Deaths </th>
+            <th mat-header-cell *matHeaderCellDef> Tot Deaths </th>
             <td mat-cell *matCellDef="let element"> {{element.deaths}} </td>
         </ng-container>
 
         <ng-container matColumnDef="recov">
-            <th mat-header-cell *matHeaderCellDef> Total Recovered </th>
+            <th mat-header-cell *matHeaderCellDef> Tot Recovered </th>
             <td mat-cell *matCellDef="let element"> {{element.recov}} </td>
         </ng-container>
 
