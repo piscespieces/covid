@@ -30,10 +30,10 @@ export class TableComponent implements OnInit {
           ({
             position: this.counter,
             name: countryObject.country_name,
-            cases: countryObject.total_cases,
-            deaths: countryObject.total_deaths,
-            recov: countryObject.total_recov,
-            permill: countryObject.case_per_mill
+            cases: countryObject.total_cases.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
+            deaths: countryObject.total_deaths.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
+            recov: countryObject.total_recov.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
+            permill: countryObject.case_per_mill.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
           })
         this.counter++
       }
