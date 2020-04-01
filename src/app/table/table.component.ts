@@ -17,6 +17,8 @@ export class TableComponent implements OnInit {
   displayedColumns: string[] = ['position', 'name', 'cases', 'deaths', 'recov', 'permill'];
   dataSource;
   counter = 1;
+
+  nfObject = new Intl.NumberFormat('en-US');
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(private apiService: ApiService) {
@@ -26,14 +28,18 @@ export class TableComponent implements OnInit {
     this.apiService.getNews().subscribe((dataJSON) => {
       this.countryJSON = dataJSON
       for (let countryObject of this.countryJSON) {
+        let totalCases = parseInt(countryObject.total_cases)
+        let totalDeaths = parseInt(countryObject.total_deaths)
+        let totalRecov = parseInt(countryObject.total_recov)
+        let casesPerMill = parseInt(countryObject.case_per_mill)
         COUNTRY_DATA.push
           ({
             position: this.counter,
             name: countryObject.country_name,
-            cases: countryObject.total_cases.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
-            deaths: countryObject.total_deaths.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
-            recov: countryObject.total_recov.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
-            permill: countryObject.case_per_mill.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+            cases: this.nfObject.format(totalCases),//.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
+            deaths: this.nfObject.format(totalDeaths),
+            recov: this.nfObject.format(totalRecov),
+            permill: this.nfObject.format(casesPerMill),
           })
         this.counter++
       }

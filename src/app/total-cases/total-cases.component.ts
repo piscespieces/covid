@@ -17,15 +17,23 @@ export class TotalCasesComponent implements OnInit {
   totalDeaths;
   totalRecov;
 
+  nfObject = new Intl.NumberFormat('en-US');
+
   constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
     this.apiService.getNews().subscribe((data) => {
       this.incomingData = data
+
       this.totalObject = this.incomingData.slice(-1)[0]
-      this.totalCases = this.totalObject.total_cases.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
-      this.totalDeaths = this.totalObject.total_deaths.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
-      this.totalRecov = this.totalObject.total_recov.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",")
+
+      let formatTotalCases = parseInt(this.totalObject.total_cases)
+      let formatTotalDeaths = parseInt(this.totalObject.total_deaths)
+      let formatTotalRecov = parseInt(this.totalObject.total_recov)
+
+      this.totalCases = this.nfObject.format(formatTotalCases)
+      this.totalDeaths = this.nfObject.format(formatTotalDeaths)
+      this.totalRecov = this.nfObject.format(formatTotalRecov)
     })
   }
 
