@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const scrapper = require('./scrapper/scrapper')
+const scrapper = require('./scrapper')
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
