@@ -1,12 +1,6 @@
 const express = require('express');
 const app = express();
-const countriesData = require('./scrapper/countriesTable.json')
-
-setInterval(function () {
-    const getCountries = require('./scrapper/scrapper');
-}, 60000); // 10 minutes
-
-// 1 * 60 * 60 * 1000); // 1 hour
+const scrapper = require('./scrapper/scrapper')
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*")
@@ -15,8 +9,8 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use("/api/countries", (req, res, next) => {
-    const data = countriesData
+app.use("/api/countries", async (req, res, next) => {
+    const data = await scrapper.getCountries()
     res.status(200).json(data)
 })
 

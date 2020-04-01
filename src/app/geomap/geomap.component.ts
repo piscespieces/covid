@@ -10,6 +10,9 @@ export class GeomapComponent implements OnInit {
 
   countryJSON;
   data = [];
+  type = 'GeoChart'
+  columnNames = ["Country", "Cases"]
+  options = {}
 
   constructor(private apiService: ApiService) {
   }
@@ -34,18 +37,17 @@ export class GeomapComponent implements OnInit {
             parseInt(countryObject.total_deaths)
           ])
       }
+
+      // this.type = 'GeoChart'
+      this.columnNames = ["Country", "Cases", "Deaths"]
+      this.options = {
+        colorAxis: {
+          values: [1, 10, 100, 1000, 10000, 11000],
+          colors: ['#FFFFCC', '#FFCC00', '#FF9900', '#FF6600', 'FF3300', '#CC0000']
+        },
+        legend: { textStyle: { italic: true } }
+      }
+
     })
   }
-
-  type = 'GeoChart'
-  columnNames = ["Country", "Cases", "Deaths"]
-  options = {
-    colorAxis: {
-      values: [1, 10, 100, 1000, 10000, 11000],
-      colors: ['#FFFFCC', '#FFCC00', '#FF9900', '#FF6600', 'FF3300', '#CC0000']
-    },
-    legend: { textStyle: { italic: true } }
-  }
-  // width = 750;
-  // height = 600;
 }

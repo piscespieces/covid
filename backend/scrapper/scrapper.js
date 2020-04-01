@@ -3,11 +3,10 @@ const cheerio = require('cheerio');
 const fs = require('fs')
 
 const url = 'https://www.worldometers.info/coronavirus/';
-const countriesTable = []
 
-const everyHour = new Date()
 
 const getCountries = async () => {
+    const countriesTable = []
     try {
         const html = await rp(url);
         const countriesMap = cheerio('table#main_table_countries_today > tbody tr', html).map(async (i, e) => {
@@ -26,23 +25,21 @@ const getCountries = async () => {
             }
             countriesTable.push(countryTableRow)
         })
-
-        return countriesTable;
-
+        return countriesTable
     } catch (error) {
         console.log(error)
     }
 
 };
 
-getCountries().then(data => {
-    fs.writeFile('./backend/scrapper/countriesTable.json', JSON.stringify(data, null, 4), (err) => {
-        if (err) {
-            console.log(`Error writing the file: ${err}`)
-        } else {
-            console.log(`Writed successfuly`)
-        }
-    })
-})
+// getCountries().then(data => {
+//     fs.writeFile('./backend/scrapper/countriesTable.json', JSON.stringify(data, null, 4), (err) => {
+//         if (err) {
+//             console.log(`Error writing the file: ${err}`)
+//         } else {
+//             console.log(`Writed successfuly`)
+//         }
+//     })
+// })
 
 exports.getCountries = getCountries;
