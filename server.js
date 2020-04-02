@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const scrapper = require('./backend/scrapper')
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, 'dist/covid19')));
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/covid19";
+app.use(express.static(distDir));
 
 app.use((req, res, next) => {
     res.setHeader("Access-Control-Allow-Origin", "*");
