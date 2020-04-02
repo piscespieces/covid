@@ -1,52 +1,33 @@
-const app = require("./backend/app");
-const debug = require("debug")("node-angular");
-const http = require("http");
+const express = require('express');
+const app = express();
+const scrapper = require('./backend/scrapper')
 
-const normalizePort = val => {
-    var port = parseInt(val, 10);
+// Create link to Angular build directory
+var distDir = __dirname + "/dist/covid19";
+app.use(express.static(distDir));
 
-    if (isNaN(port)) {
-        // named pipe
-        return val;
-    }
 
-    if (port >= 0) {
-        // port number
-        return port;
-    }
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+        "Access-Control-Allow-Headers",
+        "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+    );
+    res.setHeader(
+        "Access-Control-Allow-Methods",
+        "GET, POST, PATCH, PUT, DELETE, OPTIONS"
+    );
+    next();
+});
 
-    return false;
-};
+app.use("/api/countries", async (req, res, next) => {
+    const data = await scrapper.getCountries()
+    res.status(200).json(data)
+})
 
-const onError = error => {
-    if (error.syscall !== "listen") {
-        throw error;
-    }
-    const bind = typeof addr === "string" ? "pipe " + addr : "port " + port;
-    switch (error.code) {
-        case "EACCES":
-            console.error(bind + " requires elevated privileges");
-            process.exit(1);
-            break;
-        case "EADDRINUSE":
-            console.error(bind + " is already in use");
-            process.exit(1);
-            break;
-        default:
-            throw error;
-    }
-};
+const port = process.env.PORT || 8080;
+app.listen(port, () => {
+    console.log(`API listening on port ${port}...`);
+});
 
-const onListening = () => {
-    const addr = server.address();
-    const bind = typeof addr === "string" ? "pipe " + addr : "port " + port;
-    debug("Listening on " + bind);
-};
-
-const port = normalizePort(process.env.PORT || "3000");
-app.set("port", port);
-
-const server = http.createServer(app);
-server.on("error", onError);
-server.on("listening", onListening);
-server.listen(port);
+module.exports = app;
