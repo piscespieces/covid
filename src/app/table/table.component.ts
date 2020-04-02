@@ -35,7 +35,7 @@ export class TableComponent implements OnInit {
         // in the Angular Table they need to be type of number
         // That's why I'm using the function parseInt()
 
-        let totalCases = parseInt(countryObject.total_cases.replace(",", ""))  // Getting rid of any undesired comma, and then converting to type of number
+        let totalCases = parseInt(countryObject.total_cases)
         let totalDeaths = parseInt(countryObject.total_deaths)
         let totalRecov = parseInt(countryObject.total_recov)
         let casesPerMill = parseInt(countryObject.case_per_mill)

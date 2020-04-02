@@ -18,7 +18,7 @@ const getCountries = async () => {
 
             const countryTableRow = {
                 country_name,
-                total_cases: parseInt(total_cases),
+                total_cases: total_cases.replace(",", ""),
                 total_deaths: total_deaths.replace(",", ""),
                 total_recov: total_recov.replace(",", ""),
                 case_per_mill: case_per_mill.replace(",", "")
