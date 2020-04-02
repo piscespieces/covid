@@ -27,7 +27,7 @@ export class TotalCasesComponent implements OnInit {
 
       this.totalObject = this.incomingData.slice(-1)[0]
 
-      let formatTotalCases = parseInt(this.totalObject.total_cases)
+      let formatTotalCases = parseInt(this.totalObject.total_cases.replace(",", ""))
       let formatTotalDeaths = parseInt(this.totalObject.total_deaths)
       let formatTotalRecov = parseInt(this.totalObject.total_recov)
 

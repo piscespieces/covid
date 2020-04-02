@@ -18,7 +18,7 @@ export class TableComponent implements OnInit {
   dataSource;
   counter = 1;
 
-  nfObject = new Intl.NumberFormat('en-US');
+  nfObject = new Intl.NumberFormat('en-US'); // Necessary to format thousand separators in numbers
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
 
   constructor(private apiService: ApiService) {
@@ -28,18 +28,26 @@ export class TableComponent implements OnInit {
     this.apiService.getNews().subscribe((dataJSON) => {
       this.countryJSON = dataJSON
       for (let countryObject of this.countryJSON) {
-        let totalCases = parseInt(countryObject.total_cases)
+
+        // countryObject is the index, that in this case contains an object
+        // that comes with country_name, total_cases, and so on...
+        // They come as a string from the API, for each numeric value to work
+        // in the Angular Table they need to be type of number
+        // That's why I'm using the function parseInt()
+
+        let totalCases = parseInt(countryObject.total_cases.replace(",", ""))  // Getting rid of any undesired comma, and then converting to type of number
         let totalDeaths = parseInt(countryObject.total_deaths)
         let totalRecov = parseInt(countryObject.total_recov)
         let casesPerMill = parseInt(countryObject.case_per_mill)
+
         COUNTRY_DATA.push
           ({
             position: this.counter,
             name: countryObject.country_name,
-            cases: this.nfObject.format(totalCases),//.replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ","),
-            deaths: this.nfObject.format(totalDeaths),
-            recov: this.nfObject.format(totalRecov),
-            permill: this.nfObject.format(casesPerMill),
+            cases: this.nfObject.format(totalCases),
+            deaths: isNaN(totalDeaths) ? "0" : this.nfObject.format(totalDeaths), // They come as strings from the API, some of them are "" empty strings, after converted tu type of number they will become NaN and if so, I gotta display some string value, in this case "0"
+            recov: isNaN(totalRecov) ? "0" : this.nfObject.format(totalRecov),
+            permill: isNaN(casesPerMill) ? "0" : this.nfObject.format(casesPerMill),
           })
         this.counter++
       }
