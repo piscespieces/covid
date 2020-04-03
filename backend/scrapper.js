@@ -18,14 +18,31 @@ const getCountries = async () => {
 
             const countryTableRow = {
                 country_name,
-                total_cases: total_cases.replace(",", ""),
-                total_deaths: total_deaths.replace(",", ""),
-                total_recov: total_recov.replace(",", ""),
-                case_per_mill: case_per_mill.replace(",", "")
+                total_cases: parseInt(total_cases.replace(/,/g, "")), // String to number to be able to sort it
+                total_deaths: total_deaths.replace(/,/g, ""),
+                total_recov: total_recov.replace(/,/g, ""),
+                case_per_mill: case_per_mill.replace(/,/g, "")
             }
             countriesTable.push(countryTableRow)
         })
-        return countriesTable
+
+        // Function to Sort CountriesTable array of objects by total cases in DESC order
+        function compare(a, b) {
+            countryA = a.total_cases
+            countryB = b.total_cases
+            debugger;
+            let comparison = 0
+            if (countryA > countryB) {
+                comparison = -1
+            } else if (countryA < countryB) {
+                comparison = 1
+            }
+            return comparison
+        }
+
+        return countriesTable.sort(compare)
+
+        // Just catch any error try/catch block
     } catch (error) {
         console.log(error)
     }
