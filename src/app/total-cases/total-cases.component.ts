@@ -25,11 +25,15 @@ export class TotalCasesComponent implements OnInit {
     this.apiService.getNews().subscribe((data) => {
       this.incomingData = data
 
-      this.totalObject = this.incomingData.slice(-1)[0]
+      // Look for the object that has the country_name equals to 'Total:' which contains the total data
+      this.totalObject = this.incomingData.filter(obj => {
+        return (obj.country_name === 'Total:')
+      })
 
-      let formatTotalCases = parseInt(this.totalObject.total_cases.replace(",", ""))
-      let formatTotalDeaths = parseInt(this.totalObject.total_deaths)
-      let formatTotalRecov = parseInt(this.totalObject.total_recov)
+      // this.totalObject is an array that only has in it 1 index (0), I gotta target it to get into the value it's keys
+      let formatTotalCases = parseInt(this.totalObject[0].total_cases)
+      let formatTotalDeaths = parseInt(this.totalObject[0].total_deaths)
+      let formatTotalRecov = parseInt(this.totalObject[0].total_recov)
 
       this.totalCases = this.nfObject.format(formatTotalCases)
       this.totalDeaths = this.nfObject.format(formatTotalDeaths)
