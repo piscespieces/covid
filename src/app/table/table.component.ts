@@ -16,7 +16,7 @@ export class TableComponent implements OnInit {
   countryJSON;
   displayedColumns: string[] = ['position', 'name', 'cases', 'deaths', 'recov', 'permill'];
   dataSource;
-  counter = 1;
+  counter = 0;
 
   nfObject = new Intl.NumberFormat('en-US'); // Necessary to format thousand separators in numbers
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -51,6 +51,7 @@ export class TableComponent implements OnInit {
           })
         this.counter++
       }
+      COUNTRY_DATA.push(COUNTRY_DATA.shift())
       this.dataSource = new MatTableDataSource(COUNTRY_DATA);
       this.dataSource.paginator = this.paginator;
     })
