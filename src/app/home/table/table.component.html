@@ -15,7 +15,7 @@
             <ng-container *matCellDef="let element">
                 <td mat-cell
                     *ngIf="(element.name === 'USA' || element.name === 'Spain' || element.name === 'Italy'); else getHref">
-                    <a href="/{{element.name}}">
+                    <a routerLink="/{{element.name}}">
                         {{element.name}}
                     </a>
                 </td>
