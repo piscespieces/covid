@@ -1,36 +1,57 @@
 <div class="table-container mat-elevation-z8 mt-5">
     <table mat-table [dataSource]="dataSource">
 
+        <!-- Pos Column -->
+
         <ng-container matColumnDef="position">
             <th mat-header-cell *matHeaderCellDef> Pos </th>
             <td mat-cell *matCellDef="let element"> {{element.position}} </td>
         </ng-container>
 
-        <!-- Position Column -->
+        <!-- Name Column -->
+
         <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Country </th>
-            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            <ng-container *matCellDef="let element">
+                <td mat-cell
+                    *ngIf="(element.name === 'USA' || element.name === 'Spain' || element.name === 'Italy'); else getHref">
+                    <a href="/{{element.name}}">
+                        {{element.name}}
+                    </a>
+                </td>
+                <ng-template #getHref>
+                    <td mat-cell>
+                        {{element.name}}
+                    </td>
+                </ng-template>
+            </ng-container>
         </ng-container>
 
-        <!-- Name Column -->
+        <!-- Cases Column -->
+
         <ng-container matColumnDef="cases">
             <th mat-header-cell *matHeaderCellDef style="color: #FF9801"> Cases </th>
             <td mat-cell *matCellDef="let element"> {{element.cases}} </td>
         </ng-container>
 
-        <!-- Weight Column -->
+        <!-- Deaths Column -->
+
         <ng-container matColumnDef="deaths">
             <th mat-header-cell *matHeaderCellDef style="color: #F44335"> Deaths </th>
             <td mat-cell *matCellDef="let element"> {{element.deaths}} </td>
         </ng-container>
+
+        <!-- Recov Column -->
 
         <ng-container matColumnDef="recov">
             <th mat-header-cell *matHeaderCellDef style="color: #8BC34A"> Recovered </th>
             <td mat-cell *matCellDef="let element"> {{element.recov}} </td>
         </ng-container>
 
+        <!-- Cases Per Capita Column -->
+
         <ng-container matColumnDef="permill">
-            <th mat-header-cell *matHeaderCellDef> Cases/1M pop </th>
+            <th mat-header-cell *matHeaderCellDef> PerCapita </th>
             <td mat-cell *matCellDef="let element"> {{element.permill}} </td>
         </ng-container>
 
