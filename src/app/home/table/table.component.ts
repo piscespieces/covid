@@ -3,7 +3,7 @@ import { ApiService } from '../../api.service'
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
-const COUNTRY_DATA = []
+let COUNTRY_DATA = []
 
 @Component({
   selector: 'app-table',
@@ -56,6 +56,7 @@ export class TableComponent implements OnInit {
       COUNTRY_DATA.pop() // Delete the World row
       COUNTRY_DATA.push(COUNTRY_DATA.shift()) // 'Total:' goes to the bottom now
       this.dataSource = new MatTableDataSource(COUNTRY_DATA);
+      COUNTRY_DATA = [];
       this.dataSource.paginator = this.paginator;
     })
   }
