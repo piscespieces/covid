@@ -4,10 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { GeomapComponent } from './geomap/geomap.component';
+import { GeomapComponent } from './home/geomap/geomap.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { TotalCasesComponent } from './total-cases/total-cases.component';
-import { TableComponent } from './table/table.component';
+import { TotalCasesComponent } from './home/total-cases/total-cases.component';
+import { TableComponent } from './home/table/table.component';
 
 import { GoogleChartsModule } from 'angular-google-charts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { EstateLevelComponent } from './estate-level/estate-level.component';
+import { UsaComponent } from './estate-level/usa/usa.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import { FooterComponent } from './footer/footer.component';
     TotalCasesComponent,
     TableComponent,
     FooterComponent,
+    HomeComponent,
+    EstateLevelComponent,
+    UsaComponent,
   ],
   imports: [
     BrowserModule,

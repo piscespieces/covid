@@ -1,9 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ApiService } from '../api.service'
+import { ApiService } from '../../api.service'
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
 
-const COUNTRY_DATA = []
+let COUNTRY_DATA = []
 
 @Component({
   selector: 'app-table',
@@ -16,7 +16,7 @@ export class TableComponent implements OnInit {
   countryJSON;
   displayedColumns: string[] = ['position', 'name', 'cases', 'deaths', 'recov', 'permill'];
   dataSource;
-  counter = -1; // There are two objects that comes first in the API array before the actual countries, that's why the counters begins at -1
+  counter = 1;
 
   nfObject = new Intl.NumberFormat('en-US'); // Necessary to format thousand separators in numbers
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -51,11 +51,8 @@ export class TableComponent implements OnInit {
           })
         this.counter++
       }
-      // The first two items in the API are: 'World', and 'Total:', that means that those are the first two items of the table. 
-      COUNTRY_DATA.push(COUNTRY_DATA.shift()) // World goes to the bottom of the array (table), 'Total:' is the first one now
-      COUNTRY_DATA.pop() // Delete the World row
-      COUNTRY_DATA.push(COUNTRY_DATA.shift()) // 'Total:' goes to the bottom now
       this.dataSource = new MatTableDataSource(COUNTRY_DATA);
+      COUNTRY_DATA = [];
       this.dataSource.paginator = this.paginator;
     })
   }
