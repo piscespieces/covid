@@ -42,7 +42,7 @@ export class GeomapComponent implements OnInit {
       this.columnNames = ["Country", "Cases", "Deaths"]
       this.options = {
         colorAxis: {
-          values: [1, 10, 100, 1000, 10000, 11000],
+          values: [1, 100, 1000, 10000, 100000, 500000],
           colors: ['#FFFFCC', '#FFCC00', '#FF9900', '#FF6600', 'FF3300', '#CC0000']
         },
         legend: { textStyle: { italic: true } }
