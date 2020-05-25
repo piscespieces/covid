@@ -12,6 +12,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
+### Cheerio
+Cheerio library used to crawl and gather data from worldmeters website. Technically isn't the best approach to get data, but for learning and practicing purposes I found it fun
+
 ## Screenshots
 
 ### Geomap
