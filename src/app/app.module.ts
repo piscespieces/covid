@@ -18,6 +18,8 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeComponent } from "./home/home.component";
 
+import { environment } from "../environments/environment.prod";
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +35,7 @@ import { HomeComponent } from "./home/home.component";
     AppRoutingModule,
     EstateLevelRoutingModule,
     HttpClientModule,
-    GoogleChartsModule.forRoot("AIzaSyAYseQyQEwxNPUs7gZDvtuFMN7fs3NPSos"), // GOOGLE API KEY, GET YOURS!
+    GoogleChartsModule.forRoot(environment.google_api), // GOOGLE API KEY, GET YOURS!
     BrowserAnimationsModule,
     MatToolbarModule,
     MatTableModule,
